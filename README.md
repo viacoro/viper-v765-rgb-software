@@ -18,6 +18,7 @@ and don't have the hardware anymore to test if it would still work. But if you w
     - `source venv/bin/activate`
 - Install the requirements: 
     - `pip install -r requirements.txt`
+    - `npm i` (optional, but recommended)
 ## Usage
 - Run: `python3 index.py`
 - This will present you with two options:
