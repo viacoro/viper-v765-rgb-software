@@ -23,12 +23,13 @@ and don't have the hardware anymore to test if it would still work. But if you w
 - Run: `python3 index.py`
 - This will present you with two options:
     - **Using existing preset:** Here are the presets you would find in the normal Windows software as well as the five custom ones you can save. (e.g. spectrum, rain, breath)
-    - **Create custom preset:** This will open a GUI showing a keyboard. You can...
+    - **Create custom preset:** This will open a GUI showing a keyboard. (if you didn't do `npm i` during installation you might have to open it manually at localhost:8000)
+        - **You can...**
         - modify single keys with right click. 
         - select multiple keys with left click and modify them with the "Set Color" button at the bottom.
         - export presets to files (since I thought the 5 built-in slots aren't enough)
         - import presets from files
-        - *Don't forget to apply and click "Ok" on the alert/popup.*
+        - **Don't forget to apply and click "Ok" on the alert/popup.**
 - Now you might have to enter your sudo password so the changes can be applied.
 - Once all the kernel drivers are reattached your keyboard should have changed color.
 
