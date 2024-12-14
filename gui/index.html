@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keyboard Custom Color Editor | Viper V765</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<main>
+    <div id="keyboardContainer">
+        <img src="KB-no-text.png" alt="Keyboard">
+        <div class="topRow veryLeft">
+            <button data-index="5" id="escape">ESC</button>
+            <button data-index="17">F1</button>
+            <button data-index="23">F2</button>
+            <button data-index="29">F3</button>
+            <button data-index="35" class="lastFn">F4</button>
+            <button data-index="41">F5</button>
+            <button data-index="47">F6</button>
+            <button data-index="53">F7</button>
+            <button data-index="59" class="lastFn">F8</button>
+            <button data-index="65">F9</button>
+            <button data-index="71">F10</button>
+            <button data-index="77">F11</button>
+            <button data-index="83" class="sectionSpacing">F12</button>
+            <button data-index="92">PRNT SCRN</button>
+            <button data-index="95">SCRL LOCK</button>
+            <button data-index="101">PAUSE</button>
+        </div>
+        <div class="secondRow veryLeft">
+            <button data-index="4">^</button>
+            <button data-index="10">1</button>
+            <button data-index="16">2</button>
+            <button data-index="22">3</button>
+            <button data-index="28">4</button>
+            <button data-index="34">5</button>
+            <button data-index="40">6</button>
+            <button data-index="46">7</button>
+            <button data-index="52">8</button>
+            <button data-index="58">9</button>
+            <button data-index="64">0</button>
+            <button data-index="70">ß</button>
+            <button data-index="76">´</button>
+            <button data-index="82" class="sectionSpacing" id="backspace">BACKSPACE</button>
+            <button data-index="88">INSERT</button>
+            <button data-index="94">POS1</button>
+            <button data-index="100" class="sectionSpacing">PAGE UP</button>
+            <button data-index="106">NUM LOCK</button>
+            <button data-index="112">÷</button>
+            <button data-index="118">×</button>
+            <button data-index="124">-</button>
+        </div>
+        <div class="thirdRow veryLeft">
+            <button data-index="3" id="tabulator">TAB</button>
+            <button data-index="9" >Q</button>
+            <button data-index="15" >W</button>
+            <button data-index="21" >E</button>
+            <button data-index="27" >R</button>
+            <button data-index="33" >T</button>
+            <button data-index="39" >Z</button>
+            <button data-index="45" >U</button>
+            <button data-index="51" >I</button>
+            <button data-index="57" >O</button>
+            <button data-index="63" >P</button>
+            <button data-index="69" >Ü</button>
+            <button data-index="75" >+</button>
+            <button data-index="80"  class="sectionSpacing" id="enter">ENTER</button>
+            <button data-index="87" >DEL</button>
+            <button data-index="93" >END</button>
+            <button data-index="99"  class="sectionSpacing">PAGE DOWN</button>
+            <button data-index="105" >7</button>
+            <button data-index="111" >8</button>
+            <button data-index="117" >9</button>
+            <button data-index="122"  class="largeNum">+</button>
+
+        </div>
+        <div class="fourthRow veryLeft">
+            <button data-index="2" id="caps">CAPS</button>
+            <button data-index="8">A</button>
+            <button data-index="14">S</button>
+            <button data-index="20">D</button>
+            <button data-index="26">F</button>
+            <button data-index="32">G</button>
+            <button data-index="38">H</button>
+            <button data-index="44">J</button>
+            <button data-index="50">K</button>
+            <button data-index="56">L</button>
+            <button data-index="62">Ö</button>
+            <button data-index="68">Ä</button>
+            <button data-index="74" id="hashtag">#</button>
+            <button data-index="104">4</button>
+            <button data-index="110">5</button>
+            <button data-index="116">6</button>
+        </div>
+        <div class="fifthRow veryLeft">
+            <button data-index="1" class="longerButton">LSHIFT</button>
+            <button data-index="11"><</button>
+            <button data-index="7">Y</button>
+            <button data-index="13">X</button>
+            <button data-index="19">C</button>
+            <button data-index="25">V</button>
+            <button data-index="31">B</button>
+            <button data-index="37">N</button>
+            <button data-index="43">M</button>
+            <button data-index="49">,</button>
+            <button data-index="55">.</button>
+            <button data-index="61">-</button>
+            <button data-index="73" id="rshift">RSHIFT</button>
+            <button data-index="91" id="arrowUp">ᐃ</button>
+            <button data-index="103">1</button>
+            <button data-index="109">2</button>
+            <button data-index="115">3</button>
+            <button data-index="120" class="largeNum">ENTER</button>
+
+        </div>
+        <div class="sixthRow veryLeft">
+            <button data-index="0" class="longerButton">LCTRL</button>
+            <button data-index="6" class="longerButton">SUPER</button>
+            <button data-index="12" class="longerButton">ALT</button>
+            <button data-index="30" id="space">SPACE</button>
+            <button data-index="54" class="longerButton">ALT GR</button>
+            <button data-index="60" class="longerButton">FN</button>
+            <button data-index="66" class="longerButton">MENU</button>
+            <button data-index="78" class="longerButton sectionSpacing">RCTRL</button>
+            <button data-index="84">ᐊ</button>
+            <button data-index="90">ᐁ</button>
+            <button data-index="96" class="sectionSpacing">ᐅ</button>
+            <button data-index="102" id="NUM0">0</button>
+            <button data-index="114">,</button>
+        </div>
+    </div>
+    <div id="actions">
+<!--            <button id="lock">(Un-)Lock Super/Win Key</button> might add later-->
+<!--            <button id="record">Record Macro</button> planned for later-->
+            <button id="exOrImport">Export/Import Preset</button>
+<!--            <button id="reset">Reset Color</button>-->
+            <button id="presetNr">Change Preset Number</button>
+            <button id="set">Set Color</button>
+            <button id="apply">APPLY</button>
+    </div>
+    <div id="popups">
+
+        <form class="popup" id="colorPopup">
+            <p>
+            <label for="color">Choose a color:</label>
+            <input id="color" type="color" value="#000000">
+            </p>
+            <div><button type="reset">Cancel</button><button type="submit">Save</button></div>
+        </form>
+        <form class="popup" id="importPopup">
+            <a href="#" target="_blank" id="export">Export to file</a>
+            <p>OR</p>
+            <label for="import">Import from file:</label>
+            <input id="import" type="file">
+            <div><button type="reset">Cancel</button><button type="submit">Import</button></div>
+        </form>
+        <form class="popup" id="presetPopup">
+            <p>Choose a custom preset which will be overwritten as soon as you apply the changes:</p>
+           <p> <label for="presetNumber">Custom Preset Nr:</label>
+            <input id="presetNumber" type="number" value="1" min="1" max="5"></p>
+
+            <div><button type="reset">Cancel</button><button type="submit">Save</button></div>
+        </form>
+
+    </div>
+
+</main>
+</body>
+</html>

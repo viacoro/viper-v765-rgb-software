@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    background: #22242e;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+:root{
+    font-size: 1.3rem;
+    font-family: "Noto Sans", sans-serif;
+    --submit: #2d76ff;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+
+#keyboardContainer{
+    width: 80vw;
+    min-height: 25vw;
+    position: relative;
+    --base: 1.065vw; //old value is 1vw. uncomment lines prefixed with old: if you want to use the old images (which are with unnecessary padding)
+    //old: --base-row: 17.4vw;
+    --base-row: 8.8vw;
+    //old: --row-distance: 3vw;
+    --row-distance: calc(3.05*var(--base));
+    // background image
+    img{
+        width: 100%;
+        -webkit-user-drag: none;
+    }
+
+    // rows
+    div{
+        position: absolute;
+        display:flex;
+        flex-direction: row;
+        gap: 0.55vw;
+        //old: left: 5.9vw;
+        left: 3.9vw;
+        button[data-index]{
+            font-family: "Noto Sans", sans-serif;
+            user-select: none;
+            font-size: 0.6vw;
+            color: white;
+            background: none;
+            font-weight: bold;
+            border: white 0.07vw solid;
+            height: calc(2.5 * var(--base));
+            width: calc(2.5 * var(--base));
+            border-radius: 0.2vw;
+            cursor: pointer;
+
+            &.active{
+                border-style: dashed;
+                box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.87) inset;
+            }
+            &.contrast{
+                color: black;
+            }
+
+            &:not(.colored):hover{
+                background: #595959;
+            }
+            &:hover{
+                opacity: 0.8;
+            }
+
+            /* region CUSTOM SIZES */
+
+            &.longerButton{
+                width: calc(3.25 * var(--base));
+            }
+
+            &#tabulator{
+                width: calc(4 * var(--base));
+            }
+            &#caps{
+                width: calc(4.6 * var(--base));
+            }
+            &#backspace{
+                width: calc(5.75 * var(--base));
+            }
+            &#rshift{
+                width: calc(8 * var(--base));
+            }
+            &#space{
+                width: calc(18.8 * var(--base));
+            }
+            &#NUM0{
+                width: calc(5.6  * var(--base));
+            }
+            &#enter{
+                width: calc(3.8 * var(--base));
+                height: calc(5.5 * var(--base));
+                margin-left: calc(0.5 * var(--base));
+                z-index: 2;
+            }
+            &.largeNum{
+                height: calc(5.5 * var(--base));
+                z-index: 2;
+            }
+
+            /* endregion */
+
+            /* region SPACING */
+
+            &#hashtag{
+                margin-right: calc(15 * var(--base));
+
+            }
+
+            &#arrowUp{
+                margin: 0 calc(3.9 * var(--base));
+            }
+
+            &#escape{
+                margin-right: calc(3 * var(--base));
+            }
+
+
+            &.lastFn{
+                margin-right: calc(1.7 * var(--base));
+            }
+
+            &.sectionSpacing{
+                margin-right: calc(0.8 * var(--base));
+            }
+            /* endregion */
+        }
+
+        /* region ROW POSITIONS */
+
+        &.topRow{
+            top: calc(var(--base-row) - 4vw);
+        }
+
+        &.secondRow{
+            top: var(--base-row)
+
+        }
+
+        &.thirdRow{
+            top: calc(var(--base-row) + var(--row-distance));
+        }
+
+        &.fourthRow{
+            top: calc(var(--base-row) + var(--row-distance) *2);
+        }
+
+        &.fifthRow{
+            top: calc(var(--base-row) + var(--row-distance)*3);
+        }
+
+        &.sixthRow{
+            top: calc(var(--base-row) + var(--row-distance)*4);
+        }
+
+        /* endregion */
+    }
+}
+
+#actions{
+    z-index: 2;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    button{
+        font-size: 1rem;
+        background: grey;
+        color: white;
+        border: white 0.1rem solid;
+        padding: 0.8rem;
+        border-radius: 0.5vw;
+        cursor: pointer;
+    }
+    button#apply{
+        background: var(--submit);
+
+    }
+}
+
+#popups{
+    position: absolute;
+    display: none;
+    top: 0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    .popup{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        padding: 3rem;
+        gap: 0.3rem;
+        background: grey;
+        z-index: 100;
+        box-shadow: 0 0 20px black;
+        input[type="color"]{
+            height: 2rem;
+            width: 2rem;
+            vertical-align: middle;
+        }
+        input{
+            font-size: 1rem;
+        }
+        div{
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            button{
+                font-size: 1rem;
+                background: grey;
+                color: white;
+                border: white 0.1rem solid;
+                padding: 0.5rem;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+            button[type="submit"]{
+                background: var(--submit);
+            }
+        }
+    }
+
+}
+
